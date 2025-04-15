@@ -19,7 +19,7 @@ export class HeroService {
         power: "Fuerza sobrehumana, vuelo, visión láser",
         height: 191,
         weight: 107,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 2,
@@ -28,7 +28,7 @@ export class HeroService {
         power: "Fuerza, velocidad, resistencia, lazo de la verdad",
         height: 183,
         weight: 75,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 3,
@@ -37,7 +37,7 @@ export class HeroService {
         power: "Inteligencia, artes marciales, tecnología avanzada",
         height: 188,
         weight: 95,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 4,
@@ -46,7 +46,7 @@ export class HeroService {
         power: "Trepar muros, fuerza, agilidad, sentido arácnido",
         height: 178,
         weight: 76,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 5,
@@ -55,7 +55,7 @@ export class HeroService {
         power: "Manipulación del clima",
         height: 180,
         weight: 70,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 6,
@@ -64,7 +64,7 @@ export class HeroService {
         power: "Velocidad sobrehumana",
         height: 183,
         weight: 81,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 7,
@@ -73,7 +73,7 @@ export class HeroService {
         power: "Tecnología avanzada, inteligencia",
         height: 185,
         weight: 102,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 8,
@@ -82,7 +82,7 @@ export class HeroService {
         power: "Vuelo, fuerza, explosiones de energía",
         height: 180,
         weight: 75,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 9,
@@ -91,7 +91,7 @@ export class HeroService {
         power: "Fuerza, agilidad, traje vibranium",
         height: 183,
         weight: 91,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 10,
@@ -100,7 +100,7 @@ export class HeroService {
         power: "Magia del caos, telequinesis",
         height: 170,
         weight: 59,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 11,
@@ -109,7 +109,7 @@ export class HeroService {
         power: "Construcción de energía, vuelo",
         height: 185,
         weight: 90,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 12,
@@ -118,7 +118,7 @@ export class HeroService {
         power: "Comunicación con animales marinos, fuerza",
         height: 188,
         weight: 95,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 13,
@@ -127,7 +127,7 @@ export class HeroService {
         power: "Agilidad, inteligencia táctica",
         height: 170,
         weight: 60,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 14,
@@ -136,7 +136,7 @@ export class HeroService {
         power: "Regeneración, sentidos agudos, garras de adamantium",
         height: 160,
         weight: 135,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 15,
@@ -145,7 +145,7 @@ export class HeroService {
         power: "Magia, manipulación del tiempo y espacio",
         height: 182,
         weight: 84,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 16,
@@ -154,7 +154,7 @@ export class HeroService {
         power: "Fuerza, escudo indestructible",
         height: 188,
         weight: 99,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 17,
@@ -163,7 +163,7 @@ export class HeroService {
         power: "Telepatía, telequinesis, Phoenix Force",
         height: 168,
         weight: 56,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 18,
@@ -172,7 +172,7 @@ export class HeroService {
         power: "Absorción de energía vital y habilidades",
         height: 173,
         weight: 68,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 19,
@@ -181,7 +181,7 @@ export class HeroService {
         power: "Tecnología avanzada, superfuerza, interfaces electrónicas",
         height: 198,
         weight: 130,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 20,
@@ -190,7 +190,7 @@ export class HeroService {
         power: "Invisibilidad, campos de fuerza",
         height: 170,
         weight: 55,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 21,
@@ -199,7 +199,7 @@ export class HeroService {
         power: "Precisión, combate con arco",
         height: 180,
         weight: 85,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 22,
@@ -208,7 +208,7 @@ export class HeroService {
         power: "Fuerza, velocidad, magia",
         height: 190,
         weight: 100,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 23,
@@ -217,7 +217,7 @@ export class HeroService {
         power: "Magia oscura, teletransportación",
         height: 170,
         weight: 53,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 24,
@@ -226,7 +226,7 @@ export class HeroService {
         power: "Encogimiento, fuerza aumentada, comunicación con hormigas",
         height: 178,
         weight: 80,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 25,
@@ -235,7 +235,7 @@ export class HeroService {
         power: "Cambio de tamaño, elasticidad",
         height: 165,
         weight: 60,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 26,
@@ -244,7 +244,7 @@ export class HeroService {
         power: "Fuerza, agilidad, intelecto",
         height: 180,
         weight: 180,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 27,
@@ -253,7 +253,7 @@ export class HeroService {
         power: "Explosiones de energía, vuelo",
         height: 183,
         weight: 75,
-        gender: "Female"
+        gender: "Femenino"
       },
       {
         id: 28,
@@ -262,7 +262,7 @@ export class HeroService {
         power: "Vuelo, energía cósmica",
         height: 185,
         weight: 86,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 29,
@@ -271,7 +271,7 @@ export class HeroService {
         power: "Sentidos mejorados, artes marciales",
         height: 182,
         weight: 90,
-        gender: "Male"
+        gender: "Masculino"
       },
       {
         id: 30,
@@ -280,7 +280,7 @@ export class HeroService {
         power: "Fuerza sobrehumana, inteligencia",
         height: 200,
         weight: 130,
-        gender: "Female"
+        gender: "Femenino"
       }
     ]
     this.heroes$.next(this.heroes);
