@@ -17,11 +17,11 @@ import { Router } from '@angular/router';
 
 
 export class HeroesComponent {
-  
+
   private heroService = inject(HeroService);
   private router = inject(Router);
-  
-  
+
+
   heroes: Hero[] = [];
   filteredHeroes: Hero[] = [];
   searchHeroQuery = '';
@@ -29,6 +29,7 @@ export class HeroesComponent {
   itemsPerPage = 6;
   selectedHero!: Hero | null;
   isEditModalOpen = false;
+  loading = false;
 
   constructor() {
     this.heroService.getAllHeroes().subscribe(heroes => {
@@ -42,7 +43,7 @@ export class HeroesComponent {
     return this.filteredHeroes.slice(initialPage, initialPage + this.itemsPerPage)
   }
 
-  nextPage() : void{
+  nextPage(): void {
     if ((this.currentPage * this.itemsPerPage) < this.filteredHeroes.length) {
       this.currentPage++;
     }
@@ -58,7 +59,8 @@ export class HeroesComponent {
     this.currentPage = 1;
     const term = this.searchHeroQuery.toLowerCase();
     this.filteredHeroes = this.heroes.filter(hero =>
-      hero.name.toLowerCase().includes(term)
+      hero.name.toLowerCase().includes(term) ||
+      hero.id.toString().includes(term)
     );
   }
 
@@ -93,12 +95,19 @@ export class HeroesComponent {
       cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
-        this.heroes = this.heroes.filter(h => h.id !== hero.id);
-        this.onSearch();
-        Swal.fire('Eliminado', 'El héroe ha sido eliminado.', 'success');
+        this.loading = true;
+
+        setTimeout(() => {
+          this.heroes = this.heroes.filter(h => h.id !== hero.id);
+          this.onSearch();
+          this.loading = false;
+
+          Swal.fire('Eliminado', 'El héroe ha sido eliminado.', 'success');
+        }, 3000);
       }
     });
   }
+
 
 
   addHero() {
