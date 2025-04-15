@@ -1,9 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Hero } from '../../../models/hero.model';
+import { UppercaseDirective } from '../../../directives/uppercase.directive';
 
 @Component({
   selector: 'app-hero-card',
-  imports: [],
+  imports: [UppercaseDirective],
   templateUrl: './hero-card.component.html',
   styleUrl: './hero-card.component.css'
 })

@@ -1,5 +1,5 @@
 <div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 hover:bg-gray-50 transition-colors duration-300">
-    <h2 class="text-xl font-semibold text-gray-800 mb-2">{{ hero.name }}</h2>
+    <h2 [appUppercase]="hero.name" class="text-xl font-semibold text-gray-800 mb-2"></h2>
     <p class="text-gray-600 mb-3">{{ hero.description }}</p>
     <ul class="text-sm text-gray-700 space-y-1">
         <li><strong>Poder:</strong> {{ hero.power }}</li>
