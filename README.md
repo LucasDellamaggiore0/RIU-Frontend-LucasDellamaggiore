@@ -57,3 +57,26 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Deploy with Docker
+
+```bash
+npm install
+npm run build --prod
+```
+
+## Build the Docker image
+
+```bash
+docker build -t heroes-app .
+```
+
+## Run the Docker container
+
+```bash
+docker run -p 8080:80 heroes-app
+
+```
+
+Now open your browser at http://localhost:8080 and your Angular app should be up and running.
