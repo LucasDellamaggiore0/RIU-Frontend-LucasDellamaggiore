@@ -1,0 +1,16 @@
+<div class="bg-white rounded-lg shadow-lg border border-gray-200 p-6 hover:bg-gray-50 transition-colors duration-300">
+    <h2 class="text-xl font-semibold text-gray-800 mb-2">{{ hero.name }}</h2>
+    <p class="text-gray-600 mb-3">{{ hero.description }}</p>
+    <ul class="text-sm text-gray-700 space-y-1">
+        <li><strong>Poder:</strong> {{ hero.power }}</li>
+        <li><strong>Altura:</strong> {{ hero.height }} cm</li>
+        <li><strong>Peso:</strong> {{ hero.weight }} kg</li>
+        <li><strong>Género:</strong> {{ hero.gender }}</li>
+    </ul>
+    <div class="mt-4 flex gap-2">
+        <button class="text-white bg-green-500 hover:bg-green-600 px-4 py-2 rounded transition-colors duration-300"
+            (click)="onEditHero()">Editar</button>
+        <button class="text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition-colors duration-300"
+            (click)="onRemoveHero()">Eliminar</button>
+    </div>
+</div>
