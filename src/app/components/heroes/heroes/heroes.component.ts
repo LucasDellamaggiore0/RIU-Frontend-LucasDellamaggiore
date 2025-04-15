@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Hero } from '../../../models/hero.model';
 import Swal from 'sweetalert2';
 import { EditHeroComponent } from "../../edit-hero-modal/edit-hero/edit-hero.component";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-heroes',
@@ -16,7 +17,11 @@ import { EditHeroComponent } from "../../edit-hero-modal/edit-hero/edit-hero.com
 
 
 export class HeroesComponent {
+  
   private heroService = inject(HeroService);
+  private router = inject(Router);
+  
+  
   heroes: Hero[] = [];
   filteredHeroes: Hero[] = [];
   searchHeroQuery = '';
@@ -97,7 +102,6 @@ export class HeroesComponent {
 
 
   addHero() {
-    console.log('Añadir nuevo héroe');
-    // Lógica para agregar
+    this.router.navigate(['/add'])
   }
 }
