@@ -4,10 +4,12 @@ import { HeroService } from '../../../services/hero.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Hero } from '../../../models/hero.model';
+import Swal from 'sweetalert2';
+import { EditHeroComponent } from "../../edit-hero-modal/edit-hero/edit-hero.component";
 
 @Component({
   selector: 'app-heroes',
-  imports: [HeroCardComponent, FormsModule, CommonModule],
+  imports: [HeroCardComponent, FormsModule, CommonModule, EditHeroComponent],
   templateUrl: './heroes.component.html',
   styleUrl: './heroes.component.css'
 })
@@ -20,6 +22,8 @@ export class HeroesComponent {
   searchHeroQuery = '';
   currentPage = 1;
   itemsPerPage = 6;
+  selectedHero!: Hero | null;
+  isEditModalOpen = false;
 
   constructor() {
     this.heroService.getAllHeroes().subscribe(heroes => {
@@ -53,16 +57,44 @@ export class HeroesComponent {
     );
   }
 
-  editHero(id: number) {
-    console.log('Editar héroe:', id);
-    // Lógica para navegación o modal
+  editHero(hero: Hero) {
+    this.selectedHero = hero;
+    this.isEditModalOpen = true;
   }
 
-  deleteHero(id: number) {
-    if (confirm('¿Estás seguro de eliminar este héroe?')) {
-      this.heroService.removeHero(id);
+  onSaveEditedHero(updatedHero: Hero) {
+    const index = this.heroes.findIndex(h => h.id === updatedHero.id);
+    if (index !== -1) {
+      this.heroes[index] = updatedHero;
+      this.onSearch();
     }
+    this.closeEditModal();
   }
+
+  closeEditModal() {
+    this.isEditModalOpen = false;
+    this.selectedHero = null;
+  }
+
+  deleteHero(hero: Hero) {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: 'Esta acción no se puede deshacer.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.heroes = this.heroes.filter(h => h.id !== hero.id);
+        this.onSearch();
+        Swal.fire('Eliminado', 'El héroe ha sido eliminado.', 'success');
+      }
+    });
+  }
+
 
   addHero() {
     console.log('Añadir nuevo héroe');

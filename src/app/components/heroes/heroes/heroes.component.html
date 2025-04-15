@@ -10,10 +10,14 @@
     </div>
 
     <!-- Cards -->
+    @if (filteredHeroes.length > 0) {
     <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <app-hero-card *ngFor="let hero of paginatedHeroes" [hero]="hero" (editHero)="editHero($event)"
             (removeHero)="deleteHero($event)"></app-hero-card>
     </div>
+    } @else {
+    <p class="text-gray-500 text-center mt-10">No se encontraron héroes.</p>
+    }
 
 
     <!-- Paginación -->
@@ -24,4 +28,9 @@
         <button class="px-3 py-1 bg-gray-300 rounded" (click)="nextPage()"
             [disabled]="(currentPage * itemsPerPage) >= filteredHeroes.length">Siguiente</button>
     </div>
+
 </div>
+<!-- Modal de edición-->
+<app-edit-hero [isOpen]="isEditModalOpen" [hero]="selectedHero" (closeModal)="closeEditModal()"
+    (saveHero)="onSaveEditedHero($event)">
+</app-edit-hero>

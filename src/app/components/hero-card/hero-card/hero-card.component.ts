@@ -9,15 +9,15 @@ import { Hero } from '../../../models/hero.model';
 })
 export class HeroCardComponent {
   @Input() hero!: Hero;
-  @Output() editHero = new EventEmitter<number>();
-  @Output() removeHero = new EventEmitter<number>();
+  @Output() editHero = new EventEmitter<Hero>();
+  @Output() removeHero = new EventEmitter<Hero>();
 
   onEditHero() {
-    this.editHero.emit(this.hero.id);
+    this.editHero.emit(this.hero);
   }
 
   onRemoveHero() {
-    this.removeHero.emit(this.hero.id);
+    this.removeHero.emit(this.hero);
   }
 
 }
