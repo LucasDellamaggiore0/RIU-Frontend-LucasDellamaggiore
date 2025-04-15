@@ -1,0 +1,19 @@
+<div *ngIf="isOpen" class="modal-backdrop" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-content">
+        <h2 class="text-lg font-semibold mb-4">Editar Héroe</h2>
+
+        <div class="space-y-3">
+            <input class="input" [(ngModel)]="editableHero.name" placeholder="Nombre" />
+            <textarea class="input" [(ngModel)]="editableHero.description" placeholder="Descripción"></textarea>
+            <input class="input" [(ngModel)]="editableHero.power" placeholder="Poder" />
+            <input class="input" type="number" [(ngModel)]="editableHero.height" placeholder="Altura" />
+            <input class="input" type="number" [(ngModel)]="editableHero.weight" placeholder="Peso" />
+            <input class="input" [(ngModel)]="editableHero.gender" placeholder="Género" />
+        </div>
+
+        <div class="flex justify-end gap-2 mt-6">
+            <button (click)="closedModal()" class="btn-cancel">Cancelar</button>
+            <button (click)="savedHero()" class="btn-save">Guardar</button>
+        </div>
+    </div>
+</div>
